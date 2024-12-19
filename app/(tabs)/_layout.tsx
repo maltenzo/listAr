@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
@@ -7,11 +8,14 @@ import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
 
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
+interface TabBarIconProps {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
-}) {
+}
+
+// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
+function TabBarIcon(props: Readonly<TabBarIconProps>) {
+  // eslint-disable-next-line react-native/no-inline-styles
   return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
 }
 

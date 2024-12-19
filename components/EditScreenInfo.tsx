@@ -38,7 +38,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
           style={styles.helpLink}
           href="https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet">
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making changes
+            Tap here if your app doesn&apos;t automatically update after making changes
           </Text>
         </ExternalLink>
       </View>
@@ -47,16 +47,13 @@ export default function EditScreenInfo({ path }: { path: string }) {
 }
 
 const styles = StyleSheet.create({
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-  },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
   codeHighlightContainer: {
     borderRadius: 3,
     paddingHorizontal: 4,
+  },
+  getStartedContainer: {
+    alignItems: 'center',
+    marginHorizontal: 50,
   },
   getStartedText: {
     fontSize: 17,
@@ -64,14 +61,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   helpContainer: {
-    marginTop: 15,
-    marginHorizontal: 20,
     alignItems: 'center',
+    marginHorizontal: 20,
+    marginTop: 15,
   },
   helpLink: {
     paddingVertical: 15,
   },
   helpLinkText: {
     textAlign: 'center',
+  },
+  homeScreenFilename: {
+    marginVertical: 7,
   },
 });
